@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider1/prov/another_provider.dart';
 import 'package:provider1/prov/bottom_nav_provider.dart';
+import 'package:provider1/prov/favorite_provider.dart';
+
 import 'package:provider1/screens/botton_nav_screen.dart';
+import 'package:provider1/screens/favorite_app/favorite_screen.dart';
 
 import 'prov/counter_provider.dart';
 
@@ -13,6 +16,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => Counter()),
         ChangeNotifierProvider(create: (_) => SliderClass()),
         ChangeNotifierProvider(create: (_) => BottomNavProvider()),
+        ChangeNotifierProvider(create: (_) => FavoriteProvider()),
       ],
       child: MyApp(),
     ),

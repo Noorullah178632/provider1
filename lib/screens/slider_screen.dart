@@ -7,7 +7,6 @@ class SliderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Whole slider widget 1");
     return Scaffold(
       appBar: AppBar(title: Text("Slider Bar")),
       body: Column(
