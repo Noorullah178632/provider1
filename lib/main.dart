@@ -3,9 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:provider1/prov/another_provider.dart';
 import 'package:provider1/prov/bottom_nav_provider.dart';
 import 'package:provider1/prov/favorite_provider.dart';
+import 'package:provider1/prov/themeMode_provider.dart';
 
 import 'package:provider1/screens/botton_nav_screen.dart';
-import 'package:provider1/screens/favorite_app/favorite_screen.dart';
 
 import 'prov/counter_provider.dart';
 
@@ -17,6 +17,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => SliderClass()),
         ChangeNotifierProvider(create: (_) => BottomNavProvider()),
         ChangeNotifierProvider(create: (_) => FavoriteProvider()),
+        ChangeNotifierProvider(create: (_) => ThememodeProvider()),
       ],
       child: MyApp(),
     ),
@@ -28,9 +29,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: BottonNavScreen(),
+    return Consumer<ThememodeProvider>(
+      builder: (context, provider, index) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            brightness: Brightness.light,
+            appBarTheme: AppBarTheme(color: Colors.blue),
+          ),
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+            appBarTheme: AppBarTheme(color: Colors.black87),
+          ),
+          themeMode: provider.thememode,
+
+          home: BottonNavScreen(),
+        );
+      },
     );
   }
 }

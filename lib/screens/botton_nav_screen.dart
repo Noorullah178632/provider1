@@ -5,6 +5,7 @@ import 'package:provider1/screens/counter_screen.dart';
 import 'package:provider1/screens/favorite_app/favorite_screen.dart';
 import 'package:provider1/screens/slider_screen.dart';
 
+// ignore: must_be_immutable
 class BottonNavScreen extends StatelessWidget {
   List screens = [CounterScreen(), SliderScreen(), FavoriteScreen()];
 

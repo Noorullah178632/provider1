@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class SelectedFavoriteScreen extends StatelessWidget {
   List<int> selectedItems;
   SelectedFavoriteScreen({required this.selectedItems});
