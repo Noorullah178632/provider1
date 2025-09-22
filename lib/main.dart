@@ -6,6 +6,7 @@ import 'package:provider1/prov/favorite_provider.dart';
 import 'package:provider1/prov/themeMode_provider.dart';
 
 import 'package:provider1/screens/botton_nav_screen.dart';
+import 'package:provider1/screens/stateless_to_statefull.dart';
 
 import 'prov/counter_provider.dart';
 
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
           ),
           themeMode: provider.thememode,
 
-          home: BottonNavScreen(),
+          home: StatelessToStatefull(),
         );
       },
     );
